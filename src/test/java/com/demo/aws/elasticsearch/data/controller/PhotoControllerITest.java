@@ -1,7 +1,8 @@
 package com.demo.aws.elasticsearch.data.controller;
 
-import com.demo.aws.elasticsearch.data.Application;
-import com.demo.aws.elasticsearch.data.model.PhotoDto;
+import com.rnd.aws.AwsApplication;
+import com.rnd.aws.controller.PhotoController;
+import com.rnd.aws.model.PhotoDto;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ActiveProfiles("test")
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = AwsApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PhotoControllerITest {
 
     @Autowired
