@@ -4,6 +4,7 @@ import com.rnd.aws.model.AthModel;
 import com.rnd.aws.model.PhotoDto;
 import com.rnd.aws.service.AthService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +21,10 @@ import java.util.List;
 @RequestMapping("/ath")
 public class AthController {
 
-    private AthService service = null;
+    @Autowired
+    private AthService service;
     @GetMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<AthModel>> search(@RequestParam(value = "key") String key, @RequestParam(value = "value") String value) {
-        return new ResponseEntity<>(service.search(key, value), HttpStatus.OK);
+    public ResponseEntity<?> search(@RequestParam(value = "key") String key, @RequestParam(value = "value") String value) {
+        return service.search(key, value);
     }
 }

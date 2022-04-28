@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Configuration;
 public class AWSCredentialsConfiguration {
 
     @Value("${aws.es.accessKey:}")
-    private String esAccessKey = null;
+    private String esAccessKey;
 
     @Value("${aws.es.secretKey:}")
-    private String esSecretKey = null;
+    private String esSecretKey;
 
     @Bean
     public AWSStaticCredentialsProvider awsDynamoCredentialsProviderDevelopment() {

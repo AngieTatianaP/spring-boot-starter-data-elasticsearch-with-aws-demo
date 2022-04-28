@@ -7,7 +7,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import java.util.Date;
 
 @Data
-@Document(indexName = "ath", type = "_doc", createIndex = false)
+@Document(indexName = "ath", type = "_doc")
 public class AthDocument {
 
     private Date fecha;

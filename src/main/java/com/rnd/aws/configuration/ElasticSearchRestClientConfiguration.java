@@ -19,13 +19,13 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 public class ElasticSearchRestClientConfiguration extends AbstractElasticsearchConfiguration {
 
     @Value("${aws.es.endpoint}")
-    private String endpoint = null;
+    private String endpoint;
 
     @Value("${aws.es.region}")
-    private String region = null;
+    private String region;
 
     @Autowired
-    private AWSCredentialsProvider credentialsProvider = null;
+    private AWSCredentialsProvider credentialsProvider;
 
     /**
      * SpringDataElasticSearch data provides us the flexibility to implement our custom {@link RestHighLevelClient} instance by implementing the abstract method {@link AbstractElasticsearchConfiguration#elasticsearchClient()},

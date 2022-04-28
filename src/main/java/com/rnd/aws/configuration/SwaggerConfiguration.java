@@ -18,7 +18,7 @@ public class SwaggerConfiguration {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(getApiInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.demo.aws.elasticsearch.data.controller")).build();
+                .apis(RequestHandlerSelectors.basePackage("com.rnd.aws.controller")).build();
     }
 
     private ApiInfo getApiInfo() {
